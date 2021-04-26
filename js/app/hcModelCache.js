@@ -78,8 +78,6 @@ function hcmodel() {
                 hwv.start();
             }
             else {
-                var mangifierOperator = hwv.operatorManager.getOperator(hcMagnifierOperatorHandle);
-                mangifierOperator.setItem(item);
 
                 hwv.resizeCanvas();
                 stateCallback();
