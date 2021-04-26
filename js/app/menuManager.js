@@ -80,8 +80,9 @@ function menuManager_() {
           
 
             var m4 = new menu("otheritems")
-            m4.addItem("createblank", "blank.png", this.insertBlankItem, 0, true, m2, "Create Blank")
-            m4.addItem("createtexteditornote", "text.png", this.insertBlankItem, 1, true, m2, "Create Text Editor")
+            m4.addItem("createmodel", "createmodel.png", undefined, 1, true,m3, "Create Model Item")
+            m4.addItem("createblank", "blank.png", this.insertBlankItem, 0, true, m2, "Create Blank Item")
+            m4.addItem("createtexteditornote", "text.png", this.insertBlankItem, 1, true, m2, "Create Note")
 
             var m7 = new menu("derived")
             m7.addItem("Duplicate", "derived_duplicate.png", this.setDerived)
@@ -189,10 +190,9 @@ function menuManager_() {
 
             var m = new menu("main")
             m.setPosition(50, boundingrect.height / 2);
-            m.addItem("createmodel", "createmodel.png", undefined, 1, true,m3, "Create Model Item")
-            m.addItem("creatitem", "create.png", undefined, 1, true, m4, "Create Item")
-            m.addItem("createtexteditortext", "text2.png", this.insertBlankItem, 1, false, undefined, "Create Text Editor")
-            m.addItem("curveoptions", "newcurve.png", undefined, 1, true, m17, "Create Item")
+            m.addItem("creatitem", "create.png", undefined, 1, true, m4, "Item Menu")
+            m.addItem("createtexteditortext", "text2.png", this.insertBlankItem, 1, false, undefined, "Create Text")
+            m.addItem("curveoptions", "newcurve.png", undefined, 1, true, m17, "Line Menu")
 
 
            
@@ -221,6 +221,8 @@ function menuManager_() {
 
         },
         newCurve: function (item) {
+            $.notify("Left Click & Drag on Whiteboard to place new curve.\n(Start Dragging from Whiteboard Item to anchor curve)", {  autoHideDelay: 5000, position:"top left", className: 'info'});
+
             if (item.name == "newcurveline")
                 wbLine.setNewLineMode(wbLineType.straight);
             else if (item.name == "newcurvecurve")
@@ -400,6 +402,8 @@ function menuManager_() {
         },
         async addModelFromMenu(item, parentitem) {
 
+            $.notify("Left Click & Drag on Whiteboard to Place Model.", {  autoHideDelay: 5000, position:"top left", className: 'info'});
+
             if (parentitem.name == "loadnewmodel") {
                 var selitems = wbManager.getSelectedItems();
                 for (var i = 0; i < selitems.length; i++) {
@@ -480,15 +484,19 @@ function menuManager_() {
         },
         insertBlankItem(item, parentitem,parentmenu) {
             
+
             var imagecolor;
             if (item.imagename == "transparent.png")
                 imagecolor = undefined;
             else
                 imagecolor = item.imagename;
             if (item.name == "createtexteditortext") {
+                $.notify("Left Click & Drag on Whiteboard to Place Text Box.",  {  autoHideDelay: 5000, position:"top left", className: 'info'});
+
                 wbManager.addFromRectangle("", wbItemType.wbItemTextEditorText, imagecolor);
                 return;
             }
+            $.notify("Left Click & Drag on Whiteboard to Place Item.",  {  autoHideDelay: 5000, position:"top left", className: 'info'});
             if (parentitem != undefined) {
                 if (parentitem.name == "backgroundcolor") {
                     wbManager.setBackgroundColor(imagecolor);

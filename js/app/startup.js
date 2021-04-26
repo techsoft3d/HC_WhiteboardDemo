@@ -126,6 +126,11 @@ var ctrlPressed = false;
 var shiftPressed = false;
 function startup()
 {
+    $.notify.defaults({ className: "info" });
+  
+
+    $.notify("Whiteboard Demo\nBuild with HOOPS Communicator\n\nGeneral Tips:\nDouble Click to Activate and Interact with 3D Models.\nCtrl-Click to Highlight Multiple Items.\nMouse Wheel to Zoom.\nImages/PDF's can be dragged on Canvas.\n\n(Click on this Dialog to hide.)", {  clickToHide: true,autoHide: false, position:"top right" });
+
 
 
   
