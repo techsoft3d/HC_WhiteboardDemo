@@ -491,7 +491,7 @@ function menuManager_() {
             else
                 imagecolor = item.imagename;
             if (item.name == "createtexteditortext") {
-                $.notify("Left Click & Drag on Whiteboard to Place Text Box.",  {  autoHideDelay: 5000, position:"top left", className: 'info'});
+                $.notify("Left Click & Drag on Whiteboard to Place Text Box then start typing.",  {  autoHideDelay: 5000, position:"top left", className: 'info'});
 
                 wbManager.addFromRectangle("", wbItemType.wbItemTextEditorText, imagecolor);
                 return;
