@@ -1,14 +1,18 @@
 ﻿<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
+
 <head>
     <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-PB9P4KS');</script>
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-PB9P4KS');</script>
     <!-- End Google Tag Manager -->
-    
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1;IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
@@ -19,7 +23,9 @@
     <script type="text/javascript" src="js/keymaster.min.js"></script>
     <script type="text/javascript" src="js/iscroll.min.js"></script>
     <script type="text/javascript" src="js/mobile-detect.min.js"></script>
-    <script type="text/javascript" src="js/hoops_web_viewer.js?v=327aa00" id="hwvScript"></script>
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/gh/techsoft3d/hoops-web-viewer@2021.0.0/hoops_web_viewer.js"
+        id="hwvScript"></script>
     <script type="text/javascript" src="js/jquery.minicolors.min.js"></script>
     <script type="text/javascript" src="js/web_viewer_ui.js?v=327aa00" id="hwvUI"></script>
     <script type="text/javascript" src="js/communicator_server_integration.js?v=327aa00"></script>
@@ -67,7 +73,8 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
 
-    
+
+
     <style>
         .ui-dialog .ui-dialog-title {
             float: left;
@@ -115,28 +122,27 @@
             outline: none;
             -webkit-transition: .2s;
             transition: opacity .2s;
-            border-style:solid;
-            border-width:1px;
+            border-style: solid;
+            border-width: 1px;
         }
 
-            .myslider::-webkit-slider-thumb {
-                -webkit-appearance: none;
-                appearance: none;
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background: black;
-                cursor: pointer;
-            }
+        .myslider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background: black;
+            cursor: pointer;
+        }
 
-            .myslider::-moz-range-thumb {
-                width: 16px;
-                height: 16px;
-                border-radius: 50%;
-                background: #4CAF50;
-                cursor: pointer;
-            }
-
+        .myslider::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #4CAF50;
+            cursor: pointer;
+        }
     </style>
 
     <script type="text/javascript" id="viewerStartup">
@@ -151,17 +157,19 @@
 
 <body oncontextmenu="return false;">
     <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB9P4KS"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PB9P4KS" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    
+
     <div id="mainwindow">
         <div id="content" style="position:absolute; background-color: rgb(250,250,250);">
-            <div id="carotadiv" style="position:absolute;z-index:1;width:20%;height:100%;left:10px; display:none;overflow:hidden;margin-left:1px;border-style:none;border-width:1px">
+            <div id="carotadiv"
+                style="position:absolute;z-index:1;width:20%;height:100%;left:10px; display:none;overflow:hidden;margin-left:1px;border-style:none;border-width:1px">
                 Test
             </div>
             <canvas id="whiteboardcanvas" style="position:absolute;left:0px;top:0px;"></canvas>
-            <canvas id="whiteboardcanvasoverlay" style="position:absolute;left:0px;top:0px;pointer-events:none;z-index:100000000"></canvas>
+            <canvas id="whiteboardcanvasoverlay"
+                style="position:absolute;left:0px;top:0px;pointer-events:none;z-index:100000000"></canvas>
 
             <div id="viewerContainer"></div>
 
@@ -172,29 +180,36 @@
                         <div class="tool-icon"></div>
                     </div>
                     <div id="tool_separator_1" class="tool-separator"></div>
-                    <div id="view-button" title="Camera Menu" data-operatorclass="toolbar-camera" data-submenu="view-submenu" class="hoops-tool toolbar-menu">
+                    <div id="view-button" title="Camera Menu" data-operatorclass="toolbar-camera"
+                        data-submenu="view-submenu" class="hoops-tool toolbar-menu">
                         <div class="tool-icon"></div>
                     </div>
-                    <div id="edgeface-button" title="Wireframe on Shaded" data-operatorclass="toolbar-wireframeshaded" data-submenu="edgeface-submenu" class="hoops-tool toolbar-menu">
+                    <div id="edgeface-button" title="Wireframe on Shaded" data-operatorclass="toolbar-wireframeshaded"
+                        data-submenu="edgeface-submenu" class="hoops-tool toolbar-menu">
                         <div class="tool-icon"></div>
                     </div>
                     <div id="tool_separator_2" class="tool-separator"></div>
-                    <div id="redline-button" title="Redline Note" data-operatorclass="toolbar-redline-note" data-submenu="redline-submenu" class="hoops-tool toolbar-radio">
+                    <div id="redline-button" title="Redline Note" data-operatorclass="toolbar-redline-note"
+                        data-submenu="redline-submenu" class="hoops-tool toolbar-radio">
                         <div class="smarrow"></div>
                         <div class="tool-icon"></div>
                     </div>
-                    <div id="click-button" title="Select" data-operatorclass="toolbar-select" data-submenu="click-submenu" class="hoops-tool toolbar-radio active-tool">
+                    <div id="click-button" title="Select" data-operatorclass="toolbar-select"
+                        data-submenu="click-submenu" class="hoops-tool toolbar-radio active-tool">
                         <div class="smarrow"></div>
                         <div class="tool-icon"></div>
                     </div>
-                    <div id="camera-button" title="Orbit Camera" data-operatorclass="toolbar-orbit" data-submenu="camera-submenu" class="hoops-tool toolbar-menu">
+                    <div id="camera-button" title="Orbit Camera" data-operatorclass="toolbar-orbit"
+                        data-submenu="camera-submenu" class="hoops-tool toolbar-menu">
                         <div class="tool-icon"></div>
                     </div>
                     <div id="tool_separator_3" class="tool-separator"></div>
-                    <div id="explode-button" title="Explode Menu" data-operatorclass="toolbar-explode" data-submenu="explode-slider" class="hoops-tool toolbar-menu-toggle">
+                    <div id="explode-button" title="Explode Menu" data-operatorclass="toolbar-explode"
+                        data-submenu="explode-slider" class="hoops-tool toolbar-menu-toggle">
                         <div class="tool-icon"></div>
                     </div>
-                    <div id="cuttingplane-button" title="Cutting Plane Menu" data-operatorclass="toolbar-cuttingplane" data-submenu="cuttingplane-submenu" class="hoops-tool toolbar-menu-toggle">
+                    <div id="cuttingplane-button" title="Cutting Plane Menu" data-operatorclass="toolbar-cuttingplane"
+                        data-submenu="cuttingplane-submenu" class="hoops-tool toolbar-menu-toggle">
                         <div class="tool-icon"></div>
                     </div>
                     <div id="tool_separator_4" class="tool-separator"></div>
@@ -210,18 +225,22 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="redline-circle-button" title="Redline Circle" data-operatorclass="toolbar-redline-circle" class="submenu-icon"></div>
+                                    <div id="redline-circle-button" title="Redline Circle"
+                                        data-operatorclass="toolbar-redline-circle" class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="redline-rectangle-button" title="Redline Rectangle" data-operatorclass="toolbar-redline-rectangle" class="submenu-icon"></div>
+                                    <div id="redline-rectangle-button" title="Redline Rectangle"
+                                        data-operatorclass="toolbar-redline-rectangle" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="redline-note" title="Redline Note" data-operatorclass="toolbar-redline-note" class="submenu-icon"></div>
+                                    <div id="redline-note" title="Redline Note"
+                                        data-operatorclass="toolbar-redline-note" class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="redline-freehand" title="Redline Freehand" data-operatorclass="toolbar-redline-freehand" class="submenu-icon"></div>
+                                    <div id="redline-freehand" title="Redline Freehand"
+                                        data-operatorclass="toolbar-redline-freehand" class="submenu-icon"></div>
                                 </td>
                             </tr>
                         </table>
@@ -230,17 +249,20 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="operator-camera-walk" title="Walk" data-operatorclass="toolbar-walk" class="submenu-icon"></div>
+                                    <div id="operator-camera-walk" title="Walk" data-operatorclass="toolbar-walk"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="operator-camera-turntable" title="Turntable" data-operatorclass="toolbar-turntable" class="submenu-icon"></div>
+                                    <div id="operator-camera-turntable" title="Turntable"
+                                        data-operatorclass="toolbar-turntable" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="operator-camera-orbit" title="Orbit Camera" data-operatorclass="toolbar-orbit" class="submenu-icon"></div>
+                                    <div id="operator-camera-orbit" title="Orbit Camera"
+                                        data-operatorclass="toolbar-orbit" class="submenu-icon"></div>
                                 </td>
                             </tr>
                         </table>
@@ -249,27 +271,32 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="viewport-wireframe-on-shaded" title="Shaded With Lines" data-operatorclass="toolbar-wireframeshaded" class="submenu-icon"></div>
+                                    <div id="viewport-wireframe-on-shaded" title="Shaded With Lines"
+                                        data-operatorclass="toolbar-wireframeshaded" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="viewport-shaded" title="Shaded" data-operatorclass="toolbar-shaded" class="submenu-icon"></div>
+                                    <div id="viewport-shaded" title="Shaded" data-operatorclass="toolbar-shaded"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div title="Hidden Line" data-operatorclass="toolbar-hidden-line" class="submenu-icon"></div>
+                                    <div title="Hidden Line" data-operatorclass="toolbar-hidden-line"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="viewport-wireframe" title="Wireframe" data-operatorclass="toolbar-wireframe" class="submenu-icon"></div>
+                                    <div id="viewport-wireframe" title="Wireframe"
+                                        data-operatorclass="toolbar-wireframe" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="viewport-xray" title="XRay" data-operatorclass="toolbar-xray" class="submenu-icon"></div>
+                                    <div id="viewport-xray" title="XRay" data-operatorclass="toolbar-xray"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                         </table>
@@ -278,40 +305,50 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="view-face" title="Orient Camera To Selected Face" data-operatorclass="toolbar-face" class="submenu-icon disabled"></div>
+                                    <div id="view-face" title="Orient Camera To Selected Face"
+                                        data-operatorclass="toolbar-face" class="submenu-icon disabled"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="view-iso" title="Iso View" data-operatorclass="toolbar-iso" class="submenu-icon"></div>
+                                    <div id="view-iso" title="Iso View" data-operatorclass="toolbar-iso"
+                                        class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="view-ortho" title="Orthographic Projection" data-operatorclass="toolbar-ortho" class="submenu-icon"></div>
+                                    <div id="view-ortho" title="Orthographic Projection"
+                                        data-operatorclass="toolbar-ortho" class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="view-persp" title="Perspective Projection" data-operatorclass="toolbar-persp" class="submenu-icon"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="view-left" title="Left View" data-operatorclass="toolbar-left" class="submenu-icon"></div>
-                                </td>
-                                <td>
-                                    <div id="view-right" title="Right View" data-operatorclass="toolbar-right" class="submenu-icon"></div>
-                                </td>
-                                <td>
-                                    <div id="view-bottom" title="Bottom View" data-operatorclass="toolbar-bottom" class="submenu-icon"></div>
+                                    <div id="view-persp" title="Perspective Projection"
+                                        data-operatorclass="toolbar-persp" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="view-front" title="Front View" data-operatorclass="toolbar-front" class="submenu-icon"></div>
+                                    <div id="view-left" title="Left View" data-operatorclass="toolbar-left"
+                                        class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="view-back" title="Back View" data-operatorclass="toolbar-back" class="submenu-icon"></div>
+                                    <div id="view-right" title="Right View" data-operatorclass="toolbar-right"
+                                        class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="view-top" title="Top View" data-operatorclass="toolbar-top" class="submenu-icon"></div>
+                                    <div id="view-bottom" title="Bottom View" data-operatorclass="toolbar-bottom"
+                                        class="submenu-icon"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="view-front" title="Front View" data-operatorclass="toolbar-front"
+                                        class="submenu-icon"></div>
+                                </td>
+                                <td>
+                                    <div id="view-back" title="Back View" data-operatorclass="toolbar-back"
+                                        class="submenu-icon"></div>
+                                </td>
+                                <td>
+                                    <div id="view-top" title="Top View" data-operatorclass="toolbar-top"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                         </table>
@@ -320,31 +357,38 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="note-button" title="Create Note-Pin" data-operatorclass="toolbar-note" class="submenu-icon"></div>
+                                    <div id="note-button" title="Create Note-Pin" data-operatorclass="toolbar-note"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="measure-angle-between-faces" title="Measure Angle Between Faces" data-operatorclass="toolbar-measure-angle" class="submenu-icon"></div>
+                                    <div id="measure-angle-between-faces" title="Measure Angle Between Faces"
+                                        data-operatorclass="toolbar-measure-angle" class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="measure-distance-between-faces" title="Measure Distance Between Faces" data-operatorclass="toolbar-measure-distance" class="submenu-icon"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="measure-edges" title="Measure Edges" data-operatorclass="toolbar-measure-edge" class="submenu-icon"></div>
-                                </td>
-                                <td>
-                                    <div id="measure-point-to-point" title="Measure Point to Point" data-operatorclass="toolbar-measure-point" class="submenu-icon"></div>
+                                    <div id="measure-distance-between-faces" title="Measure Distance Between Faces"
+                                        data-operatorclass="toolbar-measure-distance" class="submenu-icon"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="select-parts" title="Select Parts" data-operatorclass="toolbar-select" class="submenu-icon"></div>
+                                    <div id="measure-edges" title="Measure Edges"
+                                        data-operatorclass="toolbar-measure-edge" class="submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="area-select" title="Area Select" data-operatorclass="toolbar-area-select" class="submenu-icon"></div>
+                                    <div id="measure-point-to-point" title="Measure Point to Point"
+                                        data-operatorclass="toolbar-measure-point" class="submenu-icon"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="select-parts" title="Select Parts" data-operatorclass="toolbar-select"
+                                        class="submenu-icon"></div>
+                                </td>
+                                <td>
+                                    <div id="area-select" title="Area Select" data-operatorclass="toolbar-area-select"
+                                        class="submenu-icon"></div>
                                 </td>
                             </tr>
                         </table>
@@ -356,31 +400,45 @@
                         <table>
                             <tr>
                                 <td>
-                                    <div id="cuttingplane-face" title="Create Cutting Plane On Selected Face" data-plane="face" data-operatorclass="toolbar-cuttingplane-face" class="toolbar-cp-plane submenu-icon disabled"></div>
+                                    <div id="cuttingplane-face" title="Create Cutting Plane On Selected Face"
+                                        data-plane="face" data-operatorclass="toolbar-cuttingplane-face"
+                                        class="toolbar-cp-plane submenu-icon disabled"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="cuttingplane-x" title="Cutting Plane X" data-plane="x" data-operatorclass="toolbar-cuttingplane-x" class="toolbar-cp-plane submenu-icon"></div>
+                                    <div id="cuttingplane-x" title="Cutting Plane X" data-plane="x"
+                                        data-operatorclass="toolbar-cuttingplane-x"
+                                        class="toolbar-cp-plane submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="cuttingplane-section" title="Cutting Plane Visibility Toggle" data-plane="section" data-operatorclass="toolbar-cuttingplane-section" class="toolbar-cp-plane submenu-icon disabled"></div>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <div id="cuttingplane-y" title="Cutting Plane Y" data-plane="y" data-operatorclass="toolbar-cuttingplane-y" class="toolbar-cp-plane submenu-icon"></div>
-                                </td>
-                                <td>
-                                    <div id="cuttingplane-toggle" title="Cutting Plane Section Toggle" data-plane="toggle" data-operatorclass="toolbar-cuttingplane-toggle" class="toolbar-cp-plane submenu-icon disabled"></div>
+                                    <div id="cuttingplane-section" title="Cutting Plane Visibility Toggle"
+                                        data-plane="section" data-operatorclass="toolbar-cuttingplane-section"
+                                        class="toolbar-cp-plane submenu-icon disabled"></div>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <div id="cuttingplane-z" title="Cutting Plane Z" data-plane="z" data-operatorclass="toolbar-cuttingplane-z" class="toolbar-cp-plane submenu-icon"></div>
+                                    <div id="cuttingplane-y" title="Cutting Plane Y" data-plane="y"
+                                        data-operatorclass="toolbar-cuttingplane-y"
+                                        class="toolbar-cp-plane submenu-icon"></div>
                                 </td>
                                 <td>
-                                    <div id="cuttingplane-reset" title="Cutting Plane Reset" data-plane="reset" data-operatorclass="toolbar-cuttingplane-reset" class="toolbar-cp-plane submenu-icon disabled"></div>
+                                    <div id="cuttingplane-toggle" title="Cutting Plane Section Toggle"
+                                        data-plane="toggle" data-operatorclass="toolbar-cuttingplane-toggle"
+                                        class="toolbar-cp-plane submenu-icon disabled"></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div id="cuttingplane-z" title="Cutting Plane Z" data-plane="z"
+                                        data-operatorclass="toolbar-cuttingplane-z"
+                                        class="toolbar-cp-plane submenu-icon"></div>
+                                </td>
+                                <td>
+                                    <div id="cuttingplane-reset" title="Cutting Plane Reset" data-plane="reset"
+                                        data-operatorclass="toolbar-cuttingplane-reset"
+                                        class="toolbar-cp-plane submenu-icon disabled"></div>
                                 </td>
                             </tr>
                         </table>
@@ -431,46 +489,55 @@
                             <div class="settings-block">
                                 <span id="settings-floorplan-feet-per-pixel-style">
                                     <span id="settings-floorplan-feet-per-pixel-text">Overlay Feet per Pixel:</span>
-                                    <input type="number" min="0" step=".1" id="settings-floorplan-feet-per-pixel" class="right-align" />
+                                    <input type="number" min="0" step=".1" id="settings-floorplan-feet-per-pixel"
+                                        class="right-align" />
                                 </span>
                             </div>
                             <div class="settings-block">
                                 <span id="settings-floorplan-zoom-style">
                                     <span id="settings-floorplan-zoom-text">Overlay Zoom Level:</span>
-                                    <input type="number" min="0" max="10" step=".1" id="settings-floorplan-zoom" class="right-align" />
+                                    <input type="number" min="0" max="10" step=".1" id="settings-floorplan-zoom"
+                                        class="right-align" />
                                 </span>
                             </div>
                             <div class="settings-block">
                                 <span id="settings-floorplan-background-opacity-text">Overlay Background Opacity:</span>
-                                <input type="number" min="0" max="1" step=".01" id="settings-floorplan-background-opacity" class="right-align" />
+                                <input type="number" min="0" max="1" step=".01"
+                                    id="settings-floorplan-background-opacity" class="right-align" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
                                 <span id="settings-floorplan-border-opacity-text">Overlay Border Opacity:</span>
-                                <input type="number" min="0" max="1" step=".01" id="settings-floorplan-border-opacity" class="right-align" />
+                                <input type="number" min="0" max="1" step=".01" id="settings-floorplan-border-opacity"
+                                    class="right-align" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
                                 <span id="settings-floorplan-avatar-opacity-text">Avatar Opacity:</span>
-                                <input type="number" min="0" max="1" step=".01" id="settings-floorplan-avatar-opacity" class="right-align" />
+                                <input type="number" min="0" max="1" step=".01" id="settings-floorplan-avatar-opacity"
+                                    class="right-align" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
                                 <div>Floorplan Colors:</div>
                                 <div>
-                                    <input type="text" id="settings-floorplan-background-color" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-floorplan-background-color" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Background</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-floorplan-border-color" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-floorplan-border-color" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Border</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-floorplan-avatar-color" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-floorplan-avatar-color" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Avatar</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-floorplan-avatar-outline-color" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-floorplan-avatar-outline-color" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Avatar Outline</label>
                                 </div>
                             </div>
@@ -483,15 +550,18 @@
                             <div class="settings-block">
                                 <div>Drawing Colors:</div>
                                 <div>
-                                    <input type="text" id="settings-drawing-background" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-drawing-background" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Background</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-drawing-sheet" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-drawing-sheet" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Sheet</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-drawing-sheet-shadow" class="color-picker" data-position="bottom left" />
+                                    <input type="text" id="settings-drawing-sheet-shadow" class="color-picker"
+                                        data-position="bottom left" />
                                     <label>Sheet Shadow</label>
                                 </div>
                                 <div>
@@ -553,13 +623,16 @@
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
-                                <span id="walk-elevation-text">Elevation Speed (<span id="elevation-speed-units">m</span>/s):</span>
-                                <input type="number" min="0" id="settings-walk-elevation" step=".1" class="right-align" />
+                                <span id="walk-elevation-text">Elevation Speed (<span
+                                        id="elevation-speed-units">m</span>/s):</span>
+                                <input type="number" min="0" id="settings-walk-elevation" step=".1"
+                                    class="right-align" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
                                 <span id="walk-view-angle-text">Field of View (Deg):</span>
-                                <input type="number" min="30" max="150" id="settings-walk-view-angle" class="right-align" />
+                                <input type="number" min="30" max="150" id="settings-walk-view-angle"
+                                    class="right-align" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
@@ -597,7 +670,8 @@
                             </div>
                             <div class="settings-block">
                                 <span>Hidden Line Opacity (0-1): </span>
-                                <input id="settings-hidden-line-opacity" class="right-align" type="number" min="0" max="1" step=".1" />
+                                <input id="settings-hidden-line-opacity" class="right-align" type="number" min="0"
+                                    max="1" step=".1" />
                                 <span class="clear-both"></span>
                             </div>
                             <div class="settings-block">
@@ -632,7 +706,8 @@
                             <div class="settings-block">
                                 <span>Enable Ambient Occlusion:</span>
                                 <input type="checkbox" id="settings-ambient-occlusion" />
-                                <input id="settings-ambient-occlusion-radius" type="number" min="0" max="10" step=".01" class="right-align" />
+                                <input id="settings-ambient-occlusion-radius" type="number" min="0" max="10" step=".01"
+                                    class="right-align" />
                                 <div class="right-align">Radius: </div>
                                 <span class="clear-both"></span>
                             </div>
@@ -648,10 +723,12 @@
                                 </div>
                                 <span id="settings-bloom-style" class="grayed-out">
                                     <label>Intensity Scale:</label>
-                                    <input id="settings-bloom-intensity" type="number" min="0" step=".1" class="right-align" disabled />
+                                    <input id="settings-bloom-intensity" type="number" min="0" step=".1"
+                                        class="right-align" disabled />
                                     <span class="clear-both"></span>
                                     <label>Threshold:</label>
-                                    <input type="range" id="settings-bloom-threshold" min="0" max="1" step="0.1" class="right-align" disabled />
+                                    <input type="range" id="settings-bloom-threshold" min="0" max="1" step="0.1"
+                                        class="right-align" disabled />
                                 </span>
                             </div>
                             <div class="settings-block">
@@ -673,10 +750,12 @@
                                 </div>
                                 <span id="settings-shadow-style" class="grayed-out">
                                     <span>Interactive:</span>
-                                    <input type="checkbox" id="settings-shadow-interactive" class="right-align" disabled />
+                                    <input type="checkbox" id="settings-shadow-interactive" class="right-align"
+                                        disabled />
                                     <span class="clear-both"></span>
                                     <label>Blur Samples:</label>
-                                    <input type="range" id="settings-shadow-blur-samples" min="0" max="20" step="1" class="right-align" disabled />
+                                    <input type="range" id="settings-shadow-blur-samples" min="0" max="20" step="1"
+                                        class="right-align" disabled />
                                 </span>
                             </div>
                         </div>
@@ -726,43 +805,51 @@
                             <div class="settings-block">
                                 <div>Background Color:</div>
                                 <div>
-                                    <input type="text" id="settings-background-top" class="color-picker" data-position="top left" />
+                                    <input type="text" id="settings-background-top" class="color-picker"
+                                        data-position="top left" />
                                     <label>Top</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-background-bottom" class="color-picker" data-position="top left" />
+                                    <input type="text" id="settings-background-bottom" class="color-picker"
+                                        data-position="top left" />
                                     <label>Bottom</label>
                                 </div>
                             </div>
                             <div class="settings-block">
                                 <div>Capping Geometry:</div>
                                 <div>
-                                    <input type="text" id="settings-capping-face-color" class="color-picker" data-position="top left" />
+                                    <input type="text" id="settings-capping-face-color" class="color-picker"
+                                        data-position="top left" />
                                     <label>Face</label>
                                 </div>
                                 <div>
-                                    <input type="text" id="settings-capping-line-color" class="color-picker" data-position="top left" />
+                                    <input type="text" id="settings-capping-line-color" class="color-picker"
+                                        data-position="top left" />
                                     <label>Line</label>
                                 </div>
                             </div>
                             <div class="settings-block">
                                 <div>Selection Color:</div>
-                                <input type="text" id="settings-selection-color-body" class="color-picker" data-position="top left" />
+                                <input type="text" id="settings-selection-color-body" class="color-picker"
+                                    data-position="top left" />
                                 <label>Body</label>
                                 <div>
                                     <span id="settings-selection-color-face-line-style">
-                                        <input type="text" id="settings-selection-color-face-line" class="color-picker" data-position="top left" />
+                                        <input type="text" id="settings-selection-color-face-line" class="color-picker"
+                                            data-position="top left" />
                                         <label>Faces and Lines</label>
                                     </span>
                                 </div>
                             </div>
                             <div class="settings-block">
-                                <input type="text" id="settings-measurement-color" class="color-picker" data-position="top left" />
+                                <input type="text" id="settings-measurement-color" class="color-picker"
+                                    data-position="top left" />
                                 <label>Measurement Color</label>
                             </div>
                             <div class="settings-block">
                                 <span id="settings-pmi-color-style" class="grayed-out">
-                                    <input type="text" id="settings-pmi-color" class="color-picker" data-position="top left" disabled />
+                                    <input type="text" id="settings-pmi-color" class="color-picker"
+                                        data-position="top left" disabled />
                                     <label>PMI Override Color</label>
                                 </span>
                                 <input type="checkbox" id="settings-pmi-enabled" />
@@ -808,4 +895,5 @@
     </div>
     <div id="hcModelCache" style="display:none"></div>
 </body>
+
 </html>
